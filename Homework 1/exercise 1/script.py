@@ -14,6 +14,7 @@ def median(values):
         return values[idx]
     else:
         idx = int(n/2)
+        #print("{} {}".format(values[idx], values[idx + 1]))
         return (values[idx] + values[idx + 1]) / 2
 
 def calc_j_k(values):  # calculate j, k for confidence level 95%
