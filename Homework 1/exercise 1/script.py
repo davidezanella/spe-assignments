@@ -1,6 +1,5 @@
 from math import floor, ceil, sqrt
 
-
 def load():
     file = open("data_ex1.csv", "r")
     values = [float(x) for x in file.readlines()]
@@ -21,7 +20,6 @@ def calc_j_k(values):  # calculate j, k for confidence level 95%
     n = len(values)
     j_idx = floor(0.5 * n - 0.98 * sqrt(n))
     k_idx = ceil(0.5 * n + 1 + 0.98 * sqrt(n))
-
     return j_idx, k_idx
 
 def mean(values):
@@ -42,7 +40,7 @@ def mean_interval(values, mean, std, eta):
 
 
 values = load()
-values = sorted(values)
+#values = sorted(values)
 
 med = median(values)
 
